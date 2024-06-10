@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // 입력한 숫자를 더하는 프로그램을 구현하자
+        // 이 떄 사용자가 0을 입력할 경우 프로그램은 종료된다.
+
+        // 1. 숫자를 입력받는다.
+        // 2. 입력한 수가 0이 아니라면, 입력받은 수를 더해준다.
+        // 3. 입력한 수가 0이 나올때 까지, 1~2를 반복
+        // 4. 만약 입력한 수가0이라면 "프로그램을 종료합니다." 멘트와 함께
+        // 반복문 종료
+
+        // while 문을 이용할 것!
+
+        // let inputNum = ""
+        // let num = 0;
+        // while(true) {
+        //     inputNum = prompt("숫자를 입력하세요")
+        //     if(inputNum !== "0") {
+        //         num+=parseInt(inputNum)
+        //         console.log(num);
+        //     }else if(inputNum === "0") {
+        //         console.log();("프로그램을 종료합니다.")
+        //         break;
+        //     }
+        // }
+
+        let sum = 0;
+
+        while(true) {
+            let inputNum = parseInt(prompt("숫자를 입력하세요"))
+
+            if(inputNum === 0) {
+                console.log("프로그램을 종료합니다.");
+                break;
+            }else {
+                sum += inputNum
+                console.log('합 :',sum);
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

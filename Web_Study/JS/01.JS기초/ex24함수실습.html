@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 계산기 실습
+        - 두 숫자와 연산자를 입력받았을 때 결과를 출력하는 프로그램을 구현하겠디.
+
+        STEP1) 첫번쨰 숫자를 입력받는다. (num1)
+        STEP2) 두번째 숫자를 입력받는다. (num2)
+        STEP3) 연산할 기호를 입력받는다. (+,-,*,/)
+        
+        STEP4) 4개의 함수를 생성
+        - 함수 이름 : addNum, minusNum, multiNum, divNum
+        - 매개변수 : a,b
+        - 실행 함수가 아닌, return 포함 함수
+         - minus, div 는 큰수에서 작은수에 대한 연산을 진행 
+         - 결과는 문서에 __과 __에 대한 연산결과는 __입니다. 라고 출력
+        */
+
+        let num1 = parseInt(prompt('첫번째 숫자'))
+        let num2 = parseInt(prompt('두번째 숫자'))
+        let cal = prompt('연산할 기호')
+        let result = 0
+
+        const addNum = (a,b)=>{
+            return a+b
+        }
+        const minusNum = (a,b)=>{
+            return a>b ? a-b : b-a
+        }
+        const multiNum = (a,b)=>{
+            return a*b
+        }
+        const divNum = (a,b)=>{
+            return a>b ? a/b : b/a
+        }
+
+        if(cal === '+'){
+            result = addNum(num1,num2)
+        }else if(cal === '-'){
+            result = minusNum(num1,num2)
+        }else if(cal === '*'){
+            result = multiNum(num1,num2)
+        }else{
+            result = divNum(num1,num2)
+        }
+        document.write(`${num1} ${cal} ${num2} 연산결과는 ${result}이다`)
+        
+    </script>
+</body>
+</html>

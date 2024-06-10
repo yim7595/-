@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 백의 자리 숫자 하나를 입력받는다.
+        //     "100이상의 숫자를 입력하시오"
+        // 2. 1번에서 받은 숫자를 num이라는 변수안에 저장
+        // 3. console창에는 num의 백의 자리 이하를 버린 결과가 출력되도록 구현하시오
+        
+        //ex) 사용자가 입력한 숫자 456 --> 백의자리이 이하 버린 결과 == 400
+
+        let num = parseInt(prompt('100이상의 숫자를 입력하시오'))
+        // let num2 = prompt('100이상의 숫자를 입력하시오')
+
+        // case1 ) 형변환을 이용
+        console.log(parseInt(num/100)*100);
+
+        // case2) 나머지 연산자
+        console.log(num-(num%100));
+        
+        // case+) 야매
+        // console.log(num2[0]+'00');    
+
+
+
+    </script>
+</body>
+</html>

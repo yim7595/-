@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>구구단을 외자!<h1>
+    <br>
+    <script>
+        document.write('<table>')
+        for(let i = 2; i <= 9; i++){
+            document.write('&nbsp;'+i+'단<br>')
+            // &nbsp; : Non - breaking Space
+            for(let j = 1; j <= 9; j++){
+                // document.write(i+" X "+j+" = "+(i*j)+"<br>")
+
+                // `(백틱)` : Tab키위에 존재, JS의 표현식에 사용
+                // `${변수} 나머지는 문자처럼 사용`
+                document.write(`${i}*${j}=${i*j}<br>`)
+
+            }
+            document.write("</td>")
+        }
+        document.write('</table>')
+    </script>
+</body>
+</html>

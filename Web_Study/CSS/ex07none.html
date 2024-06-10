@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .answer{
+            display: none;
+        }
+        /* 누군가가 질문 위에 마우스를 올렸을 때(:hover), 
+            질문 옆에있는(+) 요소인 답변이 뜨게 해주겠다. */
+        .question:hover+.answer{
+            display: inline;
+            color: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>display None</h1>
+
+    <span class="question">Q. 여러분의 인생가수 3팀</span>
+    <span class="answer">A. 아이유, 노라조, 윤도현</span>
+
+    <hr>    
+
+    <!-- style 태그를 전혀 손대지 않고, 위에처럼 구현 -->
+
+    <span class="question">Q. 지금 더우신가요?</span>
+    <span class="answer">A. 아녀 딱 적당해요</span>
+</body>
+</html>

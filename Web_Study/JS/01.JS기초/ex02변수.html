@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        console.log('num', num);
+        // console.log('etc', asdas)
+        // 변수 선언 & 초기화
+
+        // var : 재선언, 재할당 가능       
+        var num = 3;
+        var num = 5;
+        num = 5;
+        console.log(num);
+
+        console.log('num1', num1);
+
+        // let : 재선언 불가능, 재할당 가능
+        let num1 = 10;
+        num1 = 20;
+        console.log(num1);
+
+        // const : 재선언, 재할당 불가능 (상수를 정의할 때)
+        const num2 = 30;
+        console.log(num2);
+
+        // var num3 = console.log(prompt("이름을 입력하세요"));
+
+        // let name = prompt("이름을 입력하세요")
+        console.log("아오 "+name+"시치")
+
+
+        /* 
+        ★★ 면접 단골 질문!!
+
+        호이스팅(hoisting) :
+         - 인터프리터(코드를 해석하는 기계)가 변수와 함수의 선언 순서와 관계없이
+                               끌어올려서 미리 메모리 공간을 할당하는 것을 의미
+
+         - var로 선언한 변수는 호이스팅 현상O => 선언 이전에 사용이 가능하다
+                            
+         - 보안된 변수가 let, const
+            => 오류 : Cannot access '변수' before initialization
+                      "너 변수 선언되기전엔 접근 못해"
+            => const, let으로 선언한 변수가 호이스팅의 예외가 되지는 않음
+               TDZ(Temporal Dead Zone) 일시적으로 죽어있는 공간안에 보관을 해서 선언 전까지
+               는 접근만! 못하도록 설정          
+        */
+    </script>
+</body>
+</html>

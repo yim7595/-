@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="frm" method="post" action="#"
+            target="_blank" onsubmit="return false;">
+            <!--  Q1. onsubmit="return false; 이거 머임?
+                  ==> form태그 너 잠깐 서버로 가지말고 기다려봐(vs코드내에서 검사)
+            -->
+
+        <select name="major" onchange="sel_change()">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JS</option>
+        </select>
+
+        <input type="submit" value="전송" onclick="send()">
+    </form>
+
+    <p id="space"></p>
+
+    <script>
+        /* 기본적으로 form태그 내에 있는 input,button을 클릭하게 되면
+            form태그는 제출하려고 한다.
+            근데 만약, 제출하기 전 다른 함수를 실행시키고 싶다면?
+            <form>태그에 onsubmit={return false;}를 추가해준다.
+            
+            1. select 내 모든 option요소에 접근
+                -> select이름.options
+        */
+        let options= document.frm.major.options
+        console.log('options',options);
+        console.log('options 요소',options[1]); // select태그의 옵션들(인덱스 번호로 각각 구별) 
+        console.log('options 요소의 값',options[1].value) // select태그의 옵션들의 값
+
+        const send = ()=> {
+            console.log('send함수 호출 완료');
+            
+            // 1. 선택된 option 요소의 index값을 가져오자.
+            let sel = document.frm.major // 문서안에 frm이라는 이름을 가진 태그안에 major라는 속성에 접근
+            let sel_idx = sel.selectedIndex; // select속성이라 select요소들안에 인덱스 번호에 접근
+
+            // 2. 가져온 index 값의 내용을 getText라는 변수에 지정
+            let getText = options[sel_idx].value // select태그안 인덱스 번호의 밸류를 가져오기
+            console.log('getText',getT);
+
+            // 3. id가 space인 공간에 "가장 좋아하는 과목은 JS입니다."
+            //    라는 멘트를 띄워줄 것
+            // 빨리 푼 사람들은 여러번 누르면 계속해서 누적되도록 만들어줄 것
+            let space = document.getElementById("space")// 문서에서.id가 "space"인 요소에 접근
+            space.innerHTML += `가장 좋아하는 과목은${getText}입니다😎😎<br/>` // :"space" 안에있는 html속성 집어넣기
+        }
+
+        const sel_change = ()=> {
+            console.log('sel_change함수 호출 완료');
+            // 1. 선택된 옵션 요소에 index 값을 가져와야함 : selectedIndex
+
+            let sel = document.frm.major // 문서에서 frm인 form태그 안에 major라는 이름의 요소를 가져온걸 sel이라는 변수에 저장해
+
+            sel_idx = sel.selectedIndex; // sel이라는 변수안에 select된 index 번호를 가져와서 변수 sel_idx에 저장해
+            console.log('선택된인덱스', sel_idx);
+            
+            // 2. 내가 선택한 option의 요소의 값을 가져오려면?
+            console.log(options[sel_idx].value);
+        }
+
+
+
+        </script>
+        
+
+</body>
+</html>

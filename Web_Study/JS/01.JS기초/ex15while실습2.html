@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 현재 몸무게와 목표 몸무게를 입력받아서, 이후
+        // 주차별 몸무게를 입력받고 목표 몸무게를 달성하면
+        // "00kg! 달성 축하합니다." 라고 출력하고 프로그램을 종료
+
+        // [실행 결과] - console
+        // 현재 몸무게 : ? kg
+        // 목표 뭄무게 : ? kg
+        // 1주차 감량 몸무게 : ? kg
+        // ....
+        // 2주차 감량 몸무게 : ? kg
+        // ??kg 달성 축하합니다!
+
+        // 1. 현재 몸무게를 입력받는다.
+        let now = parseInt(prompt("현재 몸무게를 입력하세요"));
+        // 2. 목표 몸무게를 입력받는다.
+        let goal = parseInt(prompt("목표 몸무게를 입력하세요"));
+        // 3. 현재 몸무게와 목표 몸무게가 같아질 때 까지 프로그램을 반복
+        // 4. 현재 몸무게와 목표 몸무게가 같지 않을 경우에는 반복해서 감량 몸무게를 입력받는다.
+        // 5. 3번에 만족할 때 까지 4.를 반복시킨다.
+
+        let day = 1;
+
+        while(true) {
+            if(now !== goal){
+                now -= parseInt(prompt(day+"주차 감량 몸무게"))
+                day += 1;
+            }else if(now === goal){
+                console.log(goal+"kg 달성! 축하합니다.");
+                break;
+            }else {
+                console.log("숫자를 입력하세요");
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

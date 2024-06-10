@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">
+        <a href="#">날씨가 좋네요!</a>
+    </h1>
+    <script>
+        /* Dom (Document Object Mode)
+        : HTML 문서 내의 요소들을 전부 단일요소로 쪼개주는 개념
+        쪼개주는 이유는 각각 단일 요소에 접근할 수 있도록 하기 위함
+  
+        document.getElementById() : 해당 ID 값을 가진 요소 반환
+           => HTMLElement 객체 (요소)
+
+        document.getElementsBy~() : name, tag, class 값을 가진 모든 요소 반환
+        */
+        // Hello World를 Happy Hacking 으로 바꿔주고싶다면?
+        // 1. 최상위 객체인 문서 객체에 접근 : document.
+        // 2. 내가 원하는 요소를 가져올거임 : getElement
+        // 3. 아이디를 통해서 : ById
+
+        // 1. 문서로 가서 : document
+        // 2. 요소를 가져오겠다 : getElement
+        // 3. 아이디를 통해서 : ById
+        const title = document.getElementById('title')
+        console.log(title);
+        console.log(title.innerText);
+        title.innerText = "여름 싫어"   
+
+        const h1Tag = document.getElementsByTagName('h1')
+        console.log(h1Tag);
+
+        // STEP 2. 내가 가져온 요소에서 안에있는 텍스트만 추출 : .innerText
+        //          = 안에있는 (inner) + 텍스트를 (Text) 추출해줘
+        console.log(title.innerText);
+
+
+        // STEP 3. 내가 가져온 요소에서 안에 있는 태그+텍스트를 추출, 접근
+        console.log(title.innerHTML);
+        title.innerText = '<a href="#"커피 좋~아>'
+        title.innerHTML = '<a href="#"커피 좋~아>'
+        // 요소에 접근해서 내용을 수정할 때, 태그까지 포함하고 싶다면 innerHTML  
+        
+        // ** id 외에 다른 방법으로 요소 가져오기
+        // 1. TagName으로 가져오기
+        let h1Tag2 = document.getElementsByTagName('h1')
+        console.log(h1Tag2);
+    
+        // 2. querySelectorAll 로 가져오기 
+        let h1Tag3 = document.querySelectorAll('h1')
+        console.log(h1Tag3);
+
+    </script>
+</body>
+</html>

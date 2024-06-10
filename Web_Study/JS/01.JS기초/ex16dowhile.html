@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* do-while문
+           - 1회 동작 후 조건식을 확인하여 참일 경우 반복 수행하는 구문
+
+           do {
+                // 실행 문장
+           } while (조건식)
+
+           - 조건에 상관없이 무조건 한번은 실행해야 할 때 용이
+        */
+
+        let num = 1
+
+        do{
+            console.log('num', num)
+            num++
+        }while(num <= 10);
+
+        // 1-1 ) 1~100 까지의 숫자 중, 입력한 숫자의 배수만 출력하시오.
+        //              ex) 배수입력 : 5
+
+        // 1-2 ) 1~100 까지의 숫자 중, 사용자가 입력한 숫자의 배수의 합을 출력하시오
+        //              ex) 7입력시 ->735
+
+        let num1 = parseInt(prompt("숫자를 입력하시오")) // 입력받은 배수 숫자
+        let a = 1; // 배수에 곱해줄 숫자(배수 * a)
+        let sum = 0; // 반복된 배수들을 중첩할 공간!
+
+        do{
+            let result = num1 * a; // 배수들을 넣을 공간
+            console.log(result); // 곱한 수를 출력
+            sum += result // 
+            a++ // 5*1, 5*2, 5*3 ... 배수를 더해준다
+        }while(num1 * a <= 100) // 배수를 곱한 값을 100과 비교하여 100보다 크면 반복종료
+        
+        console.log('배수의 합', sum); // 합은 한번만 출력하면되기때문에 반복문 밖에서 출력
+    </script>
+</body>
+</html>

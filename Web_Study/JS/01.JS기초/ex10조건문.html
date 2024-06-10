@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 조건문
+        // 1. 단순if문
+        // - 조건식이 true일 경우에만 동작하는 조건문 / 조건식이 false일 경우 실행되지 않고 끝
+
+        if(true){
+            console.log("워메 개졸려");
+        }
+
+        if(false){
+            console.log("오메 죽겄네");
+        }
+
+        let money = 18000;
+        if(money>=10000){
+            console.log("돈을 뽑는다");
+        }
+        
+        // 2. if ~ else 문
+        // 조건식 참 이면 if 구문 안에 있는 실행문장 출력, 조건식 거짓 이라면 else 구문 안에 있는 실행문장 출력
+        if(true) {
+            console.log("실행문장1 출력");
+        }else {
+            console.log("실행문장2 출력");
+        }
+
+        if(false) {
+            console.log("실행문장1 출력");
+        }else {
+            console.log("실행문장2 출력");
+        }
+
+        // !, &&, ||, 조건(삼항)연산자
+        // 2의배수와 6의배수인 공배수를 구하세요.
+        // let number = parseInt(prompt("숫자를 입력해주세요"))
+
+        // if(number%2 === 0 && number%6 === 0){
+        //     console.log(number+"은(는) 2와 6의 배수입니다.");
+        // }else{
+        //     console.log(number+"은(는) 2와 6의 배수가 아닙니다.");
+        // }
+        
+        // 3. 다중 if문
+        // 여러 조건식 중 참(true)인 경우의 실행문장을 동작시키는 구문
+        if(false){
+            console.log("실행문장1 출력");
+        }else if(false){
+            console.log("실행문장2 출력");
+        }else if(true){
+            console.log("실행문장3 출력");
+        }else{
+            console.log("실행문장4 출력");
+        }
+
+        // ex) 다중 if문 실습
+        let num1 = parseInt(prompt("첫 번째 숫자를 입력하세요!"))
+        let num2 = parseInt(prompt("두 번째 숫자를 입력하세요!"))
+
+        if(num1>num2){
+            console.log("첫 번째 입력한 값이 더 큰 수 입니다.");
+        }else if(num1<num2){
+            console.log("두 번째 입력한 값이 더 큰 수 입니다.");
+        }else if(num1===num2){
+            console.log("두 수는 같습니다.");
+        }
+        
+        
+        
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

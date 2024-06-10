@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="num">
+        0
+    </p>
+
+    <button onclick="increase()">+</button>
+    <button onclick="decrease()">-</button>
+
+    <script>
+        /*
+            버튼을 클릭 했을 때, 웹 페이지의 숫자를 카운팅 하는 프로그램을 구현하시오
+
+            1. increase라는 함수를 선언하고 (화살표) 버튼을 눌렀을 때 그 함수가 호출되는지 확인
+                - increse : "incresase function called." 
+
+            2. decrease라는 함수를 선언하고 (화살표) 버튼을 눌렀을 때 그 함수가 호출되는지 확인
+                - decrese : "decresase function called."   
+
+            3. "0" 이라는 숫자를 문서에서 가지고 와서 변수 num에 저장
+            
+            4. increase라는 버튼을 누르면, 0이 하나씩 증가하고
+               decrease라는 버튼을 누르면, 0이 하나씩 감소하도록 하겠다.
+
+            5. 이 때 decrease 버튼을 누르더라도 음수를 가지는 않도록 지정   
+        */
+
+
+
+        // 1. 함수를 선언하는 방식 => 호이스팅 현상 
+        // function func (){
+        //     console.log('func')
+        // }
+
+        // 2. 호이스팅 현상을 방지하고자 나온 변수 키워드 : let const 
+        // let func2 = function(){}
+
+        // func2 = 3 // 재할당 
+
+        // // 3. 아 누군가가 재할당할 수 없도록 ->const 
+        // const func3 = function(){}
+
+        // // 4. 편의상 화살표함수
+        // const func4 = ()=>{} 
+
+        
+
+        const increase = ()=>{ // 증가 함수
+            console.log("incresase function called.");
+
+            let num = document.getElementById('num') // num 이라는 지역변수 지정(전역으로 지정가능)
+            console.log(parseInt(num.innerText));
+
+            num.innerText = parseInt(num.innerText)+1
+        }
+
+
+        const decrease = ()=>{  // 감소 함수
+            console.log("decrease funtion called.");
+
+            let num = document.getElementById('num')
+
+            console.log(parseInt(num.innerText));
+            
+            // 1. if문 case)
+            // num.innerText = parseInt(num.innerText)-1
+            // if(num.innerText < 0) { // num이 0보다 작을 경우 num++을 통해 음수되는것을 방지
+            //     num.innerText++;
+            // }
+
+            // 2. 삼항연산자 case)
+            num.innerText = parseInt(num.innerText) > 0 ? parseInt(num.innerText)-1 : 0 
+        }
+    
+
+    </script>
+</body>
+</html>

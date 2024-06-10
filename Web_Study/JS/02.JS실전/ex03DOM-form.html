@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="frm" method="post" action="#" target="_blank">
+        이름 <input type="text" name="name" value="지우"><br/>
+        나이 <input type="text" name="age" value="중2병"><br/>
+        직업 <input type="text" name="job" value="포켓몬트레이너"><br/>
+        PW <input type="password" name="pw" value="1234"><br/>
+        <input type="submit" name="frm_submit" value="전송">
+    </form>
+
+    <script>
+        // documnet.form이름 으로 form 요소로 접근가능
+
+        // 폼 객체 접근
+        console.log(document.frm);
+
+        console.log(`폼의 이름 : ${document.frm.name}`);
+        console.log(`폼의 이름 : ${document.frm.method}`);
+        console.log(`폼의 이름 : ${document.frm.action}`);
+        console.log(`폼의 이름 : ${document.frm.target}`);
+        console.log(`폼의 이름 : ${document.frm.target.length}`);
+
+        
+        // form 안에 있는 자식요소 input에 접근
+
+        let frm_len = document.frm.length; // form태그 속성의 길이 변수지정
+
+        // 모든 form속성의 이름 가져오기(document.frm.elements[i].name)
+        for(let i = 0; i <frm_len; i++){
+            console.log(`자식요소 ${document.frm.elements[i].name}`);
+        }
+
+        // 모든 form속성의 값 가져오기(document.frm.elements[i].value)
+        for(let i = 0; i <frm_len; i++){
+            console.log(`자식요소 값 ${document.frm.elements[i].value}`);
+        }
+        
+    </script>
+
+</body>
+</html>

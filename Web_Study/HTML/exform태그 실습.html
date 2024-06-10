@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{
+            background: gray;
+            height: 40px;
+        }
+
+        td{
+            background: whitesmoke;
+            
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="">
+      <table>
+        <tr>
+            <th colspan="2">Step 1: 아이디/비번 입력</th>
+        </tr>
+        <tr>
+            <td>아이디</td>
+            <td><input name="id"></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input name="pw" type="password"></td>
+        </tr>   
+        <tr>
+            <td>비밀번호 확인</td>
+            <td><input name="pw" type="password"></td>
+        </tr>
+        <tr>
+            <th colspan="2">Step 2: 개인정보</th>
+        </tr>
+        <tr>
+            <td>성별</td>
+            <td>
+                남 <input type="radio" name="gender" value="man">
+                여 <input type="radio" name="gender" value="woman">
+            </td>
+        </tr>
+        <tr>
+            <td >혈액형</td>
+            <td >
+                <select>
+                <option>A형</option>
+                <option>B형</option>
+                <option>AB형</option>
+                <option>O형</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>생일</td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <th colspan="2">Step 3: 선호도</th>
+        </tr>
+        <tr>
+            <td>취미</td>
+            <td>
+                축구 <input type="checkbox" name="menu" value="sc"> 
+                야구 <input type="checkbox" name="menu" value="ba"> 
+                농구 <input type="checkbox" name="menu" value="bs"> 
+            </td>
+        </tr>
+        <tr>
+            <td>좋아하는 색깔</td>
+            <td><input type="color"></td>
+        </tr>
+        <tr>
+            <th colspan="2">Step 4 : 하고싶은 말</th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit">
+                <input type="reset">
+            </td>  
+        </tr>
+
+      </table>     
+    </form>
+
+
+
+
+
+
+</body>
+</html>

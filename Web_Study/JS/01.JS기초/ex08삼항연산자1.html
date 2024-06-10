@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 숫자 2개를 입력받는다.
+        // 2. 입력받은 숫자 2개를 비교한다.
+        // 3. 두개의 숫자 중 더 큰 수를 console에 출력한다
+        // ==> 9이가 더 큰 수 입니다.
+
+        let num1 = parseInt(prompt("첫번째 숫자를 입력하세요"));
+        let num2 = parseInt(prompt("두번째 숫자를 입력하세요"));
+        let result = num1>num2 ? num1+"이 더 큰 수 입니다." : num2+"이 더 큰 수 입니다.";
+
+        // num1과 num2의 짝수 홀수를 구분해보자
+        // 결과 num1 홀수, num2 짝수
+
+        let result2 = num1%2===0 ? num1+"은 짝수입니다." : num1+"은 홀수입니다." 
+        console.log(result2);
+        num2%2===0 ? console.log(num2+"은 짝수입니다.") : console.log(num2+"은 홀수입니다.")
+        
+
+
+
+    </script>
+</body>
+</html>

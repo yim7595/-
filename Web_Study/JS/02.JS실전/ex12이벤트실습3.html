@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <br>
+    <input type="text" id="input2">
+    <br>
+    <button id="btn1">연산결과</button>
+    <h1 id="h1Tag"></h1>
+
+    <script>
+
+    let input1 = document.getElementById("input1")
+    let input2 = document.getElementById("input2")
+    let btn1 = document.getElementById("btn1")
+    let h1Tag = document.getElementById("h1Tag")
+
+    btn1.addEventListener('click', ()=>{
+    
+    let sum = parseInt(input1.value) + parseInt(input2.value)
+    h1Tag.innerText = `두수의 합은 ${sum}입니다.`
+    })
+
+
+
+    </script>
+</body>
+</html>
