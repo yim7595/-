@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Ownglyph_noocar-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_noocar-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Ownglyph_noocar-Rg';
+    /* 
+    [웹 폰트 적용] 
+
+    1. 눈누폰트 검색 
+    2. 원하는 폰트 클릭 
+    ** 폰트 추천
+    - 프리텐다드, 프리젠테이션, g마켓산스, 에스코어드림 등 
+
+    3. 웹폰트로 사용 부분을 복사 
+
+    4. CSS에 font-face 그대로 붙여넣기 
+        *(전체선택자) 사용 시, 모든 글자가 해당 폰트로 나오기 때문에,
+                      본문용 폰트를 작성하는것을 추천!
+         
+                      제목용 폰트는 따로 class를 생성해서 설정하는 것을 추천
+    */
+}
