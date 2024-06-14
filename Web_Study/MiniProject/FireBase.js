@@ -103,11 +103,9 @@ if(sessionStorage.getItem("id")){ // sessionStorge에 id값이 존재하는지 �
         logoutBtn.href = "Login.html" // 로그아웃버튼일때 이동하고싶은 주소 지정
         sessionStorage.removeItem("id") // 세션에 담은 id값 삭제
         sessionStorage.removeItem("name") // 세션에 담은 name값 삭제
+        
     })
 }
-
-
-
 
 // let getUserBtn = document.getElementById("getUserBtn")
 // getUserBtn.addEventListener('click',()=>{
