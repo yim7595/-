@@ -23,6 +23,64 @@
     font-style: normal;
 }
 
+/* background title */
+.page-title {
+  user-select: none; /* 표준 */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari 및 Chrome */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  position: absolute;
+  top: -25%;
+  left: -100%;
+  font-size: 28em;
+  color: rgba(123, 154, 204, 0.1);
+  /* color: rgba(0, 0, 0, 0.03); */
+  white-space: nowrap;
+  transform: scaleX(1.15);
+  z-index: 0;
+  animation: moveRight 2s forwards;
+}
+
+.page-title-reverse {
+  user-select: none; /* 표준 */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari 및 Chrome */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  position: absolute;
+  bottom: -25%;
+  right: -100%;
+  font-size: 28em;
+  color: rgba(123, 154, 204, 0.1);
+  /* color: rgba(0, 0, 0, 0.03); */
+  white-space: nowrap;
+  transform: scaleX(1.15);
+  z-index: 0;
+  animation: moveLeft 2s forwards;
+}
+
+@keyframes moveRight {
+  to {
+      left: 0;
+  }
+}
+
+@keyframes moveLeft {
+  to {
+      right: 0;
+  }
+}
+
+
+
+
+
+
 
 
 body{
