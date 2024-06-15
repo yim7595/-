@@ -79,6 +79,7 @@ const writeUserData = (id, pw, name, tel, email) => {
     console.log(logindata) // 잘 담아왔는지 확인
     if(logindata.id == id && logindata.pw == pw){ // id,pw 일치하는지 확인
         alert("로그인 성공")
+        alert(`${logindata.name}님 환영합니다!`)
         sessionStorage.setItem("id",logindata.id) // 세션에 id 담아주기
         sessionStorage.setItem("name",logindata.name) // 세션에 name 담아주기
         window.location.href = "Login.html" // 로그인 성공할경우 해당페이지로 이동

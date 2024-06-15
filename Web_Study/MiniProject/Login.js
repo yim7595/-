@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var submitBtn = document.getElementById("submit-btn");
     
 
-    
     function resetClass(element, className) {
         element.classList.remove(className);
     }
@@ -17,9 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
             resetClass(form, "signin");
             resetClass(form, "reset");
             form.classList.add("signup");
-            submitBtn.innerText = "회원가입";
-            submitBtn.style.display = "inline-block"; // submit-btn-login 표시
-            submitBtnLogin.style.display = "none"; // submit-btn-login 숨기기
+            submitBtn.style.display = "inline-block"; // submit-btn-login 버튼표시
+            submitBtnLogin.style.display = "none"; // submit-btn-login 버튼숨기기
         });
     }
     
