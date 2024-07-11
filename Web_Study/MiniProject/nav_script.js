@@ -28,7 +28,7 @@ async function toggleLanguage() {
         console.log(input);
         var i18nKey = input.getAttribute('data-i18n');
         if (i18nKey) {
-            input.setAttribute('placeholder', translations[currentLanguage][i18nKey]);
+            input.setAttribute('placeholder', translations[i18nKey]);
         }
     });
 }
